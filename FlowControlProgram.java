@@ -1,27 +1,24 @@
-// This is a loop that prints numbers 1 through 100, and says if it's even or odd
-
-public class FlowControlProgram {
+// This is a loop that prints numbers 1 through 100, and says if it's even or odd using an array
+// This is writtin by Leo 
+public class arrayproject {
 public static void main(String[] args) {
-  int totalsum = 0;
 
-  // This is the code for the loop and counting 1 to 100
+int sum = 0;
 
-    for (int number = 0; number <= 100; number++) {
-    System.out.print(number);
+// This is the array and loop
+int[] number = new int[100];
+    for (int i = 0; i < number.length; i++) {
+    number[i] = i+1; 
+    System.out.print(number[i]);
 
-      // This is the code for telling if it's even or odd
-
-      if (number%2 == 0) {
-      System.out.print(" even");} 
-      else { System.out.print(" odd "); }   
-
-      // This is the code for the sum of the numbers
-
-      System.out.print(" Sum ");
-      totalsum = totalsum+number; 
-      System.out.println(totalsum); 
-      
-
-    }
-  }
-}    
+    //This is to tell even or odd
+   if (number[i]%2 == 0) {
+      System.out.println(" even");} 
+      else { System.out.println(" odd"); } 
+    
+        //This is to sum all the numbers 
+        sum = number[i] + sum; 
+        System.out.println("The sum is: " + sum); 
+}
+    }    
+}

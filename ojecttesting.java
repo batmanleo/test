@@ -7,12 +7,17 @@ Arraylist<horse> objects=new Arraylist<horse>();
 
 horse horse1 = new horse("Patrick",2012);
 horse horse2 = new horse("Johnny",2011);
+horse horse3 = new horse("Gyro",2004);
+
 
 System.out.println("First horse's name: " + horse1.name);
 System.out.println("First horse's birthday: " + horse1.birthYear);
 
 System.out.println("Second horse's name: " + horse2.name);
 System.out.println("Second horse's birthday: " + horse2.birthYear);
+
+System.out.println("Third horse's name: " + horse3.name);
+System.out.println("Third horse's birthday: " + horse3.birthYear);
 }
 }
 
@@ -31,3 +36,4 @@ public class horse {
 
     }
     }
+

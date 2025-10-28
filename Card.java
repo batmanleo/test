@@ -12,7 +12,8 @@ public class Card {
     boolean inAHand = false;
     boolean inPlayersHand = false;
     boolean cardNotOffical; //This one is if the card is made up like: 15 of plates, or -11 of dragons
-    
+
+
 // These are the methods
 
     public void playcard(){
@@ -47,8 +48,10 @@ public class Card {
         this.inAHand = inAHand;
         this.inPlayersHand = inPlayersHand; 
 
-
-
-
  }
+ 
+ public String toString() {
+     return number + " of " + suit;
+ }
+
 }

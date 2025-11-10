@@ -1,4 +1,4 @@
-public class Card {
+public class Card implements comparable<Card>  {
 
 // These are the attributes
 // And what they are set to by default     
@@ -12,7 +12,8 @@ public class Card {
     boolean inAHand = false;
     boolean inPlayersHand = false;
     boolean cardNotOffical; //This one is if the card is made up like: 15 of plates, or -11 of dragons
-
+    int suitSort;
+   
 
 // These are the methods
 
@@ -47,11 +48,25 @@ public class Card {
         this.inDeck = inDeck;
         this.inAHand = inAHand;
         this.inPlayersHand = inPlayersHand; 
+        this.colour = colour;
 
+    if(this.suit == "spades") this.suitSort = 1;
+    if(this.suit == "clubs") this.suitSort = 2;
+    if(this.suit == "hearts") this.suitSort = 3;
+    if(this.suit == "diamonds") this.suitSort = 4;
+    if(this.suit == "jokers") this.suitSort = 5;
  }
+
  
+
+
  public String toString() {
-     return number + " of " + suit;
+     return number + " of " + suit + suitSort;
  }
 
+ public int compareTo(Card o){
+    if(o.suitSort == this.suitSort){ 
+    return o.number-number; }
+    return o.suitSort-this.suitSort;
+ }
 }

@@ -1,4 +1,4 @@
-public class Card implements comparable<Card>  {
+public class Card implements Comparable<Card>  {
 
 // These are the attributes
 // And what they are set to by default     
@@ -61,12 +61,12 @@ public class Card implements comparable<Card>  {
 
 
  public String toString() {
-     return number + " of " + suit + suitSort;
+     return System.lineSeparator() + number + " of " + suit;
  }
 
  public int compareTo(Card o){
     if(o.suitSort == this.suitSort){ 
-    return o.number-number; }
-    return o.suitSort-this.suitSort;
+    return this.number-o.number; }
+    return this.suitSort-o.suitSort;
  }
 }

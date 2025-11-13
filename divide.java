@@ -1,3 +1,5 @@
+//this code is written by Leo to showcase exceptions
+
 public class divide {
 public static void main(String[] args) {
 

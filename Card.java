@@ -13,6 +13,7 @@ public class Card implements Comparable<Card>  {
     boolean inPlayersHand = false;
     boolean cardNotOffical; //This one is if the card is made up like: 15 of plates, or -11 of dragons
     int suitSort;
+    String printValue;
    
 
 // These are the methods
@@ -55,18 +56,29 @@ public class Card implements Comparable<Card>  {
     if(this.suit == "hearts") this.suitSort = 3;
     if(this.suit == "diamonds") this.suitSort = 4;
     if(this.suit == "jokers") this.suitSort = 5;
+    
+    this.printValue = String.valueOf(this.number);
+    if(this.number == 11) this.printValue = "jack";
+    if(this.number == 12) this.printValue = "queen";
+    if(this.number == 13) this.printValue = "king";
+    if(this.number == 14) this.printValue = "ace";
+
+    
  }
 
- 
+public int getValue(){
+    return number;
+}
 
 
  public String toString() {
-     return System.lineSeparator() + number + " of " + suit;
+     return System.lineSeparator() + printValue + " of " + suit;
  }
 
  public int compareTo(Card o){
-    if(o.suitSort == this.suitSort){ 
-    return this.number-o.number; }
-    return this.suitSort-o.suitSort;
+    if(o.number == this.number){ 
+    return this.suitSort-o.suitSort;}
+    return this.number-o.number; 
+    
  }
 }

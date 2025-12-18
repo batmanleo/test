@@ -1,3 +1,5 @@
+//this program was written by leo
+
 public class cardgame {
 public static void main(String[] args) {
     Card tempCard;

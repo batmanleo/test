@@ -1,3 +1,5 @@
+//this program was written by leo
+
 public class Card implements Comparable<Card>  {
 
 // These are the attributes
